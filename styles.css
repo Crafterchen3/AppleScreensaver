@@ -1,0 +1,44 @@
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(270deg, #430170, #00102b);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.title {
+    font-size: 2em;
+    color: white;
+    text-align: left;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-weight: 500;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    animation: fadeOut 5s forwards 10s;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
