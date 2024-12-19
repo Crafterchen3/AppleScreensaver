@@ -34,16 +34,7 @@ fetch('tvos15.json')
         const videoElement = document.querySelector('video');
         if (videoElement) {
             const videoUrl = randomUrl["url-4K-SDR"];
-            fetch(videoUrl)
-                .then(response => response.blob())
-                .then(blob => {
-                    const videoBlobUrl = URL.createObjectURL(blob);
-                    const webmVideoElement = document.createElement('video');
-                    webmVideoElement.src = videoBlobUrl;
-                    webmVideoElement.type = 'video/webm';
-                    videoElement.src = webmVideoElement.src;
-                })
-                .catch(err => console.error('Error converting video to webm:', err));
+            videoElement.src = videoUrl;
         }
         const titleElement = document.querySelector('.title');
         if (titleElement) {
